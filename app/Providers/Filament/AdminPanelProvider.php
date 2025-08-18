@@ -27,6 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->domain(config('tenancy.central_domains')[0] ?? 'collector.test')
             ->login()
             ->colors([
                 'primary' => Color::Amber,
